@@ -263,7 +263,10 @@ class PinPasswordActivityPresenter @Inject constructor(
     input.layoutParams = params
     container.addView(input)
 
-    val alertDialogBuilder = androidx.appcompat.app.AlertDialog.Builder(activity, R.style.OppiaAlertDialogTheme)
+    val alertDialogBuilder = androidx.appcompat.app.AlertDialog.Builder(
+      activity,
+      R.style.OppiaAlertDialogTheme
+    )
       .setTitle(
         resourceHandler.getStringInLocaleWithWrapping(
           R.string.admin_confirm_app_wipe_title, appName
@@ -290,7 +293,6 @@ class PinPasswordActivityPresenter @Inject constructor(
         )
       }
 
-
     alertDialog = alertDialogBuilder.create()
 
     // Disable the positive button on startup and listen for text changes
@@ -311,7 +313,6 @@ class PinPasswordActivityPresenter @Inject constructor(
 
     alertDialog.show()
   }
-
 
   fun handleOnDestroy() {
     if (::alertDialog.isInitialized && alertDialog.isShowing) {

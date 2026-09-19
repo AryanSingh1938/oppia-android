@@ -37,8 +37,8 @@ fun DataResetConfirmationDialog(
       )
     },
     text = {
-      Column{
-      Text(stringResource(R.string.admin_confirm_app_wipe_message, appName))
+      Column {
+        Text(stringResource(R.string.admin_confirm_app_wipe_message, appName))
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
           value = inputText,
